@@ -26,7 +26,7 @@ O projeto utiliza o framework [NestJS](https://nestjs.com/) e é composto de mó
 3. Git
 4. Yarn
 
-**Obs.:**: Todos os testes foram realizados no sistema operacional Debian Buster, portanto é aconselhável utilizar um sistema unix-like.
+**Obs.:** Todos os testes foram realizados no sistema operacional Debian Buster, portanto é aconselhável utilizar um sistema unix-like.
 
 ## Primeiros passos
 
