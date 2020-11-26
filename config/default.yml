@@ -1,0 +1,22 @@
+server:
+  protocol: http
+  host: localhost
+  port: 3000
+
+cache:
+  mocky:
+    exams:
+      maxAge: 3600 * 1000
+
+mocky:
+  endpoints:
+    exams: 'http://www.mocky.io/v2/5d681ede33000054e7e65c3f'
+
+scheduling:
+  maxForExamAndDate: 2
+
+db:
+  type: mongodb
+  host: localhost
+  port: 27017
+  database: agendamento-exames
