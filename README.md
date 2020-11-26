@@ -52,6 +52,12 @@ Após o projeto estar rodando localmente você poderá acessar a interface do sw
 2. Remover o container do banco de dados(apagará todos os dados já salvos)
 `yarn docker:mongodb:remove`
 
+3. Rodar os testes unitários
+`yarn test`
+
+4. Rodar os testes de cobertura
+`yarn test:cov`
+
 ## Swagger
 
 A interface do swagger possui os serviços documentados e com exemplos de utilização, bem como explicação do significado de cada campo.
