@@ -21,10 +21,10 @@ O projeto utiliza o framework [NestJS](https://nestjs.com/) e é composto de mó
 
 É necessário instalar os seguintes softwares para poder rodar o projeto localmente:
 
-1. Node v12
-2. Docker v19
-3. Git
-4. Yarn
+- Node v12
+- Docker v19
+- Git
+- Yarn
 
 **Obs.:** Todos os testes foram realizados no sistema operacional Debian Buster, portanto é aconselhável utilizar um sistema unix-like.
 
