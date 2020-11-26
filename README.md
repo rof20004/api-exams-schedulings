@@ -1,75 +1,57 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+API Exams Schedulings
+===
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Descrição
 
-## Description
+Serviço REST para gerenciamento de agendamentos de exames para os clientes cadastrados.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Tecnologias
 
-## Installation
+- Node v12
+- Docker v19
+- TypeScript v4
+- Swagger v4
+- MongoDB
 
-```bash
-$ npm install
-```
+## Arquitetura
 
-## Running the app
+O projeto utiliza o framework [NestJS](https://nestjs.com/) e é composto de módulos, sendo que cada módulo é estruturado utilizando a [n-tier architecture](https://pt.wikipedia.org/wiki/Arquitetura_multicamada). O projeto utiliza a [arquitetura orientada a serviços](https://pt.wikipedia.org/wiki/Service-oriented_architecture) e o [padrão rest](https://restfulapi.net/).
 
-```bash
-# development
-$ npm run start
+## Pré-requisitos
 
-# watch mode
-$ npm run start:dev
+É necessário instalar os seguintes softwares para poder rodar o projeto localmente:
 
-# production mode
-$ npm run start:prod
-```
+1. Node v12
+2. Docker v19
+3. Git
+4. Yarn
 
-## Test
+**Obs.:**: Todos os testes foram realizados no sistema operacional Debian Buster, portanto é aconselhável utilizar um sistema unix-like.
 
-```bash
-# unit tests
-$ npm run test
+## Primeiros passos
 
-# e2e tests
-$ npm run test:e2e
+1. Clonar o projeto
+`$ git clone https://github.com/rof20004/api-exams-schedulings.git`
 
-# test coverage
-$ npm run test:cov
-```
+2. Instalar as dependências
+`$ yarn`
 
-## Support
+3. Criar o container docker do banco de dados
+`$ yarn docker:mongodb:create`
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+4. Rodar o projeto
+`$ yarn start:dev`
 
-## Stay in touch
+## Utilização
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Após o projeto estar rodando localmente você poderá acessar a interface do swagger para consumir os serviços:
 
-## License
+1. Swagger Ui
+`http://localhost:3000/api`
 
-  Nest is [MIT licensed](LICENSE).
+2. Remover o container do banco de dados(apagará todos os dados já salvos)
+`yarn docker:mongodb:remove`
+
+## Swagger
+
+A interface do swagger possui os serviços documentados e com exemplos de utilização, bem como explicação do significado de cada campo.
