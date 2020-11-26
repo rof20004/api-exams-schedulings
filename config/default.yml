@@ -19,4 +19,4 @@ db:
   type: mongodb
   host: localhost
   port: 27017
-  database: agendamento-exames
+  database: api-exams-scheduling
