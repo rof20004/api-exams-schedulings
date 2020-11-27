@@ -15,5 +15,7 @@ before_script:
   - yarn docker:mongodb:create
 
 script:
-  - yarn test
-  - yarn build
+  - yarn test:cov
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
