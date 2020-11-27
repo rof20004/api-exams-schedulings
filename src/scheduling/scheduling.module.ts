@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ClientModule } from '../client/client.module';

@@ -1,7 +1,7 @@
 import { HttpService, Injectable, NotFoundException } from '@nestjs/common';
 import { ISetupCache, setupCache } from 'axios-cache-adapter';
-import * as config from 'config';
 import { ExamDto } from './dto/exam.dto';
+import * as config from 'config';
 
 const cacheConfig = config.get('cache');
 const mockyConfig = config.get('mocky');

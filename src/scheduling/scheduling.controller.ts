@@ -1,7 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import { ApiOperation, ApiResponse, ApiTags } from "@nestjs/swagger";
 import { CreateSchedulingDto } from "./dto/create-scheduling.dto";
-import { GetSchedulingDto } from "./dto/get-scheduling.dto";
 import { QuerySchedulingDto } from "./dto/query-scheduling.dto";
 import { SchedulingService } from "./scheduling.service";
 import { Scheduling } from "./entities/scheduling.entity";
@@ -31,7 +30,7 @@ export class SchedulingController {
   @ApiResponse({ status: 400, description: 'Validation failed' })
   @ApiResponse({ status: 404, description: 'No schedulings found for client' })
   @ApiOperation({ summary: 'Get all client schedulings by cpf' })
-  async findByClientCpf (@Query() querySchedulingDto: QuerySchedulingDto): Promise<GetSchedulingDto> {
+  async findByClientCpf (@Query() querySchedulingDto: QuerySchedulingDto): Promise<any> {
     return await this.schedulingService.findByClientCpf(querySchedulingDto);
   }
 

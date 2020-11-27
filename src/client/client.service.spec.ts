@@ -1,12 +1,21 @@
-import { NotFoundException } from '@nestjs/common';
+import { ConflictException, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { ClientRepository } from './client.repository';
 import { ClientService } from './client.service';
 import { CreateClientDto } from './dto/create-client.dto';
 import { UpdateClientDto } from './dto/update-client.dto';
-import { ExamService } from '../exam/exam.service';
-import { SchedulingService } from '../scheduling/scheduling.service';
-import { SchedulingRepository } from '../scheduling/scheduling.repository';
+
+class DuplicateError {
+    private _code: number;
+
+    constructor(code: number) {
+        this._code = code;
+    }
+
+    get code () {
+        return this._code;
+    }
+}
 
 const mockClientRepository = () => ({
     create: jest.fn(),
@@ -52,6 +61,32 @@ describe('ClientService', () => {
         const result = await service.create(payload);
         expect(repository.save).toHaveBeenCalled();
         expect(result).toHaveProperty('id');
+    });
+
+    it('create a duplicated client', async () => {
+        repository.save.mockRejectedValue(new DuplicateError(11000));
+
+        const name = 'Rodolfo';
+        const cpf = '12345678901';
+        const birthDate = new Date();
+
+        const payload: CreateClientDto = { name, cpf, birthDate };
+
+        expect(async () => await service.create(payload)).rejects.toThrowError(ConflictException);
+        expect(repository.save).toHaveBeenCalled();
+    });
+
+    it('create a client and throw internal server error', async () => {
+        repository.save.mockRejectedValue(new InternalServerErrorException());
+
+        const name = 'Rodolfo';
+        const cpf = '12345678901';
+        const birthDate = new Date();
+
+        const payload: CreateClientDto = { name, cpf, birthDate };
+
+        expect(async () => await service.create(payload)).rejects.toThrowError(InternalServerErrorException);
+        expect(repository.save).toHaveBeenCalled();
     });
 
     it('get all clients', async () => {

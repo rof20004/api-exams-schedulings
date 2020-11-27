@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { HttpModule, Module } from '@nestjs/common';
 import { ExamController } from './exam.controller';
 import { ExamService } from './exam.service';

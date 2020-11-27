@@ -7,7 +7,6 @@ import {
 import { InjectRepository } from '@nestjs/typeorm';
 import { Scheduling } from './entities/scheduling.entity';
 import { SchedulingRepository } from './scheduling.repository';
-import { GetSchedulingDto } from './dto/get-scheduling.dto';
 import { CreateSchedulingDto } from './dto/create-scheduling.dto';
 import { ExamService } from '../exam/exam.service';
 import { ClientService } from '../client/client.service';
@@ -77,7 +76,7 @@ export class SchedulingService {
     }
   }
 
-  async findByClientCpf (querySchedulingDto: QuerySchedulingDto): Promise<GetSchedulingDto> {
+  async findByClientCpf (querySchedulingDto: QuerySchedulingDto): Promise<any> {
     const { cpf } = querySchedulingDto;
 
     const schedules = await this.schedulingRepository.find({
