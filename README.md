@@ -4,12 +4,10 @@
 
 <p align="center">
   <a target="_blank" href="https://travis-ci.org/github/rof20004/api-exams-schedulings"><img src="https://travis-ci.org/rof20004/api-exams-schedulings.svg?branch=master" alt="Build status" /></a>
-</p>
-
-<p align="center">
-      <a href="https://codecov.io/gh/rof20004/api-exams-schedulings">
-        <img src="https://codecov.io/gh/rof20004/api-exams-schedulings/branch/master/graph/badge.svg?token=75UTB5C6DY"/>
-      </a>
+    
+<a href="https://codecov.io/gh/rof20004/api-exams-schedulings">
+    <img src="https://codecov.io/gh/rof20004/api-exams-schedulings/branch/master/graph/badge.svg?token=75UTB5C6DY"/>
+  </a>
 </p>
 
 ## Descrição
