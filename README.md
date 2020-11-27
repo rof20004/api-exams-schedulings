@@ -5,8 +5,12 @@
 <p align="center">
   <a target="_blank" href="https://travis-ci.org/github/rof20004/api-exams-schedulings"><img src="https://travis-ci.org/rof20004/api-exams-schedulings.svg?branch=master" alt="Build status" /></a>
     
-<a href="https://codecov.io/gh/rof20004/api-exams-schedulings">
+  <a target="_blank" href="https://codecov.io/gh/rof20004/api-exams-schedulings">
     <img src="https://codecov.io/gh/rof20004/api-exams-schedulings/branch/master/graph/badge.svg?token=75UTB5C6DY"/>
+  </a>
+
+  <a target="_blank" href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
   </a>
 </p>
 
