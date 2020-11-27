@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a target="_blank" href="https://travis-ci.com/github/rof20004/api-exams-schedulings"><img src="https://travis-ci.org/rof20004/api-exams-schedulings.svg?branch=master" alt="Build status" /></a>
+  <a target="_blank" href="https://travis-ci.org/github/rof20004/api-exams-schedulings"><img src="https://travis-ci.org/rof20004/api-exams-schedulings.svg?branch=master" alt="Build status" /></a>
 </p>
 
 ## Descrição
