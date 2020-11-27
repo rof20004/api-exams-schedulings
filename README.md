@@ -49,20 +49,20 @@ O projeto utiliza o framework [NestJS](https://nestjs.com/) e é composto de mó
 
 ## Utilização
 
-Após o projeto estar rodando localmente você poderá acessar a interface do swagger para consumir os serviços:
+Após o projeto estar rodando localmente você poderá acessar a interface do swagger para consumir os serviços. A interface possui os serviços documentados e com exemplos de utilização, bem como explicação do significado de cada campo.
 
-1. Swagger Ui
+- Swagger Ui
 `http://localhost:3000/api`
 
-2. Remover o container do banco de dados(apagará todos os dados já salvos)
+## Scripts
+
+Abaixo alguns scripts disponíveis. Todos os scripts estão disponíveis na propriedade "scripts" dentro do package.json.
+
+- Remover o container do banco de dados(apagará todos os dados já salvos)
 `yarn docker:mongodb:remove`
 
-3. Rodar os testes unitários
+- Rodar os testes unitários
 `yarn test`
 
-4. Rodar os testes de cobertura
+- Rodar os testes de cobertura
 `yarn test:cov`
-
-## Swagger
-
-A interface do swagger possui os serviços documentados e com exemplos de utilização, bem como explicação do significado de cada campo.
