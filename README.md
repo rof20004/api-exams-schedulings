@@ -77,7 +77,7 @@ Abaixo alguns scripts disponíveis. Todos os scripts estão disponíveis na prop
 
 ## Configurações
 
-Os arquivos de configurações do projeto, seja de parâmetros ou informações como porta da aplicação, endereço do banco de dados, variáveis de ambiente e etc. estão nos arquivos dentro da pasta config, na raiz do projeto. Neles é feita a configuração do parâmetro responsável pela limitação de agendamentos possíveis para o mesmo exame e data, bem como configurar o tempo de cache do endpoint que lista os exames disponíveis.
+Os arquivos de configurações do projeto, seja de parâmetros ou informações como porta da aplicação, endereço do banco de dados, variáveis de ambiente e etc. estão dentro da pasta config, na raiz do projeto. Neles é feita a configuração do parâmetro responsável pela limitação de agendamentos possíveis para o mesmo exame e data, bem como configurar o tempo de cache do endpoint que lista os exames disponíveis.
 
 ## Cache
 
