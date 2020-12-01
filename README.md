@@ -74,3 +74,18 @@ Abaixo alguns scripts disponíveis. Todos os scripts estão disponíveis na prop
 
 - Rodar os testes de cobertura
 `yarn test:cov`
+
+## Configurações
+
+Os arquivos de configurações do projeto, seja de parâmetros ou informações como porta da aplicação, endereço do banco de dados, variáveis de ambiente e etc. estão nos arquivos dentro da pasta config, na raiz do projeto. Neles é feita a configuração do parâmetro responsável pela limitação de agendamentos possíveis para o mesmo exame e data, bem como configurar o tempo de cache do endpoint que lista os exames disponíveis.
+
+## Cache
+
+A requisição para o serviço da listagem de exames possui um cache de 1 hora, parametrizado nos arquivos de configurações citados acima, fazendo com que as próximas requisições depois da primeiro, dentro do período de 1 hora, não precisem realizar uma consulta ao serviço externo todas as vezes, tornando a consulta mais performática. O cache armazena os dados em memória ram.
+
+```
+cache:
+  mocky:
+    exams:
+      maxAge: 3600 * 1000 // 1 hora, sendo 3600 milisegundos multiplicado por 1000 milisegundos => milisegundos x horas
+```
