@@ -81,7 +81,7 @@ Os arquivos de configurações do projeto, seja de parâmetros ou informações 
 
 ## Cache
 
-A requisição para o serviço da listagem de exames possui um cache de 1 hora, parametrizado nos arquivos de configurações citados acima, fazendo com que as próximas requisições depois da primeiro, dentro do período de 1 hora, não precisem realizar uma consulta ao serviço externo todas as vezes, tornando a consulta mais performática. O cache armazena os dados em memória ram.
+A requisição para o serviço da listagem de exames possui um cache de 1 hora, parametrizado nos arquivos de configurações citados acima, fazendo com que as próximas requisições depois da primeira, dentro do período de 1 hora, não precisem realizar uma consulta ao serviço externo todas as vezes, tornando a consulta mais performática. O cache armazena os dados em memória.
 
 ```
 cache:
