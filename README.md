@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
   </a>
 
-  <a target="_blank" href="https://bettercodehub.com/edge/badge/rof20004/api-exams-schedulings?branch=master">
+  <a target="_blank" href="https://bettercodehub.com/results/rof20004/api-exams-schedulings">
     <img src='https://bettercodehub.com/edge/badge/rof20004/api-exams-schedulings?branch=master'>
   </a>
 </p>
