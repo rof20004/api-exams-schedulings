@@ -1,4 +1,4 @@
-import { Column, Entity, ObjectID, ObjectIdColumn, Unique, ValueTransformer } from 'typeorm';
+import { Column, Entity, ObjectID, ObjectIdColumn, Unique } from 'typeorm';
 
 @Entity()
 @Unique(['client', 'date', 'exam'])
